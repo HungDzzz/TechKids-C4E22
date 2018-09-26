@@ -1,29 +1,25 @@
 from turtle import *
 shape("turtle")
 
-color("red")
 for i in range(4):
-    forward(150)
-    left(90)
-
-color("blue")
-left(60)
-forward(150)
-left(-120)
-forward(150)
-left(130)
-forward(150)
-left(70)
-forward(165)
-left(80)
-forward(165)
-left(70)
-forward(150)
-
+    if i%2==0 :
+        color("red")
+        for _ in range(6-i):
+            forward(150)
+            left(360/(6-i))
+    else :
+        color("blue")
+        if i==1 :
+            for _ in range(6-i):
+                forward(150)
+                left(360/(6-i))
+        else:
+            color("red")
+            forward(150)
+            color("blue")
+            for _ in range(2):
+                left(120)
+                forward(150)
+left(120)
 color("red")
-left(70)
-forward(150)
-for i in range(5):
-    left(60)
-    forward(150)
 mainloop()
