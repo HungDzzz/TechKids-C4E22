@@ -24,4 +24,4 @@ print(person_list)
 #p= person_list[0]
 for p in person_list:
     #print(person_list[0]['age'])
-    print(p['age'])
+    print(p['name'],p['age'],sep=" : ")
