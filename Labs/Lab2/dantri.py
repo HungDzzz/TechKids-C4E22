@@ -49,7 +49,7 @@ for li in li_list:
     news_list.append(new)
 #print(*news_list, sep = '\n')
 # pip install pyexcel
-# pip install pyexcel-xlxs (duoi xlxs)
+# pip install pyexcel-xlxs (duoi xlsx)
 # pip install pyexcel-xls (duoi xls)
 
 
