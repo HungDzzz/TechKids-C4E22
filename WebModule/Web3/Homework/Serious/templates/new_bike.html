@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Bike</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div id="root">
+        <form action="" class="containter_center" method="POST">
+            <b><label for="model">Model</label></b>
+            <input type="text" name="model" placeholder="e.g. Honda"><br>
+            <b><label for="daily_fee">Daily fee (VND)</label></b>
+            <input type="text" name="daily_fee" placeholder="e.g. 100000"><br>
+            <b><label for="image">Image</label></b>
+            <input type="text" name="image" placeholder="e.g. https://hondaxemay.com.vn/xe.jpg"><br>
+            <b><label for="year">Year</label></b>
+            <input type="text" name="year" placeholder="e.g. 2013"><br>
+            <a href="/new_bike">
+                <button onclick="myFunction()">Submit</button>
+                <script>
+                    function myFunction(){
+                        alert("Thành Công !")
+                    }
+                </script>
+            </a>
+        </form>
+    </div>
+</body>
+</html>
