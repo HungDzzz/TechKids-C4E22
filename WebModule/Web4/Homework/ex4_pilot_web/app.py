@@ -17,8 +17,8 @@ def poll(poll_code):
   # 1. get poll
   poll_list = Poll.objects(code=poll_code) # filter : loc ra cai minh can
   poll = poll_list[0]
-  # print(poll.question)
-  # print(poll.options)
+  print(poll.question)
+  print(poll.options)
 
   # BTVN : object(yob__gt=1990) gt : lon hon, lt : nho hon
 
