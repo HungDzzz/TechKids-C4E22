@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
+import mlab
+from form import Form
 app = Flask(__name__)
+
+mlab.connect()
 
 @app.route("/")
 def homepage():
@@ -17,7 +21,9 @@ def register():
         yob = form['yob']
         gender = form['gender']
         city = form['city']
-        print(firstname,lastname,email,yob,gender,city, sep= ' : ')
+        #print(firstname,lastname,email,yob,gender,city, sep= ' : ')
+        F = Form(firstname=firstname, lastname= lastname, email= email, yob=yob, gender= gender,city=city)
+        F.save()
     return 'Gotcha'
 
 
