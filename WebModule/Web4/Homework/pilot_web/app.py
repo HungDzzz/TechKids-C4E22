@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for # url_for la tao duong dan tren client
 import mlab
 from random import choice
 from poll import Poll
+from vote import Vote
 
 app = Flask(__name__)
 
@@ -37,6 +38,24 @@ def polls():
   # 2. render all polls
   return render_template("polls.html", polls = poll_list)
 
+@app.route('/vote/<poll_code>', methods=['GET','POST'])
+def vote(poll_code):
+  # 1. get poll
+  poll = Poll.objects(code=poll_code).first() # .first la lay phan tu dau tien
+
+  if request.method == 'GET':
+    # 2. render poll detail + input
+    return render_template("vote.html", p=poll)
+    # 3. handle form request (POST)
+  elif request.method == 'POST':
+    form = request.form
+    name = form['voter']
+    choice = form['choice']
+    #vote = form['vote']
+    # 4. Save
+    new_vote = Vote(name=name, choice=choice, poll= poll)
+    new_vote.save()
+    return "Voted"
 
 @app.route("/new_poll", methods=['GET','POST']) # methods de nhan ca post neu k chi nhan get
 def new_poll():
@@ -58,7 +77,9 @@ def new_poll():
         code += choice(alphabet)
     p = Poll(question=question, options=option, code= code)
     p.save()
-    return "Gotcha"
+    url = url_for("poll", poll_code =p.code)
+    #return redirect("/poll/" + p.code)
+    return redirect(url)
 
 if __name__ == '__main__':
   app.run(debug=True)
