@@ -1,0 +1,10 @@
+﻿Xây dựng website review các món ăn, địa điểm, công nghệ... 
+Nó như một  diễn đàn, cho người dùng có thể đăng bài nêu ? kiến cá nhân của mình về một hoặc nhiều chủ đề nêu trên.
+-- Người sử dụng muốn đăng bài thì cần phải đăng ký tài khoản trên website, nếu không chỉ có thể xem và bình luân được bài viết.
+-- Có thể sử dụng tài khoản facebook để đăng ký, cũng như chia sẻ lên mạng xã hội.
+-- Có thể tìm kiếm nội dung chủ đề mà mình quan tâm.
+-- Khi người dùng login, có thể post bài lên website.
+-- Dưới mỗi một bài đăng có comment của những người khác về bài đăng đó.
+Website nhằm tạo ra một diễn đàn, hay nói cách khác là một kênh thông tin, qua đó mọi người có thể xem được phản hồi hay nhận định ý kiến về một món ăn, địa điểm hay công nghệ...
+=>> Giả sử khi bạn muốn đi du lịch, đi ăn hay mua sắm ở một nơi nào đó, nếu như biết được sản phẩm, món ăn đó có tốt không, nơi đó có đẹp không có phải rất bổ ích không?
+Qua đó đem lại cho độc giả một cái nhìn sâu sắc hơn, kết nối mọi người với nhau hơn!!!
